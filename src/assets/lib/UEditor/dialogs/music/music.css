@@ -1,0 +1,417 @@
+html,body{height:100%;}
+*{box-sizing: border-box;}
+.wrapper{padding: 10px;height: 100%;overflow: hidden;}
+.tabbody{height: calc(100% - 35px);}
+.panel{
+   height:100%;
+}
+.searchBar{
+   height: 30px;
+   padding: 7px 0 3px;
+   width: 90%;
+   margin: 0px auto;
+}
+.searchInput{
+   width:480px;
+   border: 1px solid #ccc;
+   padding: 4px;
+   border-radius: 5px;
+   margin-right: 10px;
+}
+.searchBtn{
+
+   display: inline-block;
+   line-height: 1;
+   white-space: nowrap;
+   cursor: pointer;
+   background: #fff;
+   border: 1px solid #dcdfe6;
+   color: #606266;
+   -webkit-appearance: none;
+   text-align: center;
+   box-sizing: border-box;
+   outline: none;
+   margin: 0;
+   transition: .1s;
+   font-weight: 500;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   padding: 6px 10px;
+   font-size: 12px;
+   border-radius: 4px;
+}
+
+.resultBar{
+   width: 90%;
+   margin: 10px auto;
+   border: 1px solid #CCC;
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #D3D6DA;
+   overflow: hidden;
+   height: calc(100% - 50px);
+}
+
+.listPanel{overflow: hidden;}
+.panelon{display:block;}
+.paneloff{display:none}
+
+.page{width:220px;margin:20px auto;overflow: hidden;}
+.pageon{float:right;width:24px;line-height:24px;height:24px;margin-right: 5px;background: none;border: none;color: #000;font-weight: bold;text-align:center}
+.pageoff{float:right;width:24px;line-height:24px;height:24px;cursor:pointer;background-color: #fff;
+   border: 1px solid #E7ECF0;color: #2D64B3;margin-right: 5px;text-decoration: none;text-align:center;}
+
+.m-box{width:100%;}
+.m-m{float: left;line-height: 20px;height: 20px;}
+.m-h{height:24px;line-height:24px;padding-left: 46px;background-color:#FAFAFA;border-bottom: 1px solid #DAD8D8;font-weight: bold;font-size: 12px;color: #333;}
+.m-l{float:left;width:40px; }
+.m-t{float:left;width:140px;}
+.m-s{float:left;width:110px;}
+.m-z{float:left;width:180px;}
+.m-try-t{float: left;width: 60px;;}
+
+.m-try{float:left;width:20px;height:20px;background:url('http://static.tieba.baidu.com/tb/editor/images/try_music.gif') no-repeat ;}
+.m-trying{float:left;width:20px;height:20px;background:url('http://static.tieba.baidu.com/tb/editor/images/stop_music.gif') no-repeat ;}
+
+.loading{width:95px;height:7px;font-size:7px;margin:60px auto;background:url(http://static.tieba.baidu.com/tb/editor/images/loading.gif) no-repeat}
+.empty{width:300px;height:40px;padding:2px;margin:50px auto;line-height:40px; color:#006699;text-align:center;}
+
+
+/**上传部分样式**/
+
+.element-invisible{
+   width: 0 !important;
+   height: 0 !important;
+   border: 0;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+   position: absolute !important;
+   clip: rect(1px, 1px, 1px, 1px);
+}
+
+#upload .queueList {
+   margin: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: hidden;
+}
+#upload .statusBar {
+   height: 45px;
+   border-bottom: 1px solid #dadada;
+   margin: 0 10px;
+   padding: 0;
+   line-height: 45px;
+   vertical-align: middle;
+   position: relative;
+}
+#upload p {
+   margin: 0;
+}
+#upload .statusBar .btns .uploadBtn, #upload .statusBar .btns .uploadBtn.state-paused {
+   background: #00b7ee;
+   color: #fff;
+   border-color: transparent;
+}
+#upload .statusBar .btns {
+   position: absolute;
+   top: 7px;
+   right: 0;
+   line-height: 30px;
+}
+#filePickerBtn {
+   display: inline-block;
+   float: left;
+}
+#upload .placeholder {
+   margin: 10px;
+   border: 2px dashed #e6e6e6;
+   *border: 0px dashed #e6e6e6;
+   height: calc(100% - 20px);
+   padding-top: 150px;
+   text-align: center;
+   background: url(./images/image.png) center 70px no-repeat;
+   color: #cccccc;
+   font-size: 18px;
+   position: relative;
+   top: 0;
+   *top: 10px;
+}
+
+#upload .filelist {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: relative;
+   height: 300px;
+}
+#upload .filelist li:hover div.file-panel{
+   display:block;
+}
+#upload .filelist div.file-panel {
+   position: absolute;
+   height: 30px;
+   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#80000000', endColorstr='#80000000') \0;
+   background: rgba(0, 0, 0, 0.5);
+   width: 100%;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: 300;
+   display:none;
+}
+#upload .filelist li {
+   width: 113px;
+   height: 113px;
+   background: url(./images/bg.png);
+   text-align: center;
+   margin: 9px 0 0 9px;
+   *margin: 6px 0 0 6px;
+   position: relative;
+   display: block;
+   float: left;
+   overflow: hidden;
+   font-size: 12px;
+}
+#upload .filelist li.filePickerBlock {
+   width: 113px;
+   height: 113px;
+   background: url(./images/image.png) no-repeat center 12px;
+   border: 1px solid #eeeeee;
+   border-radius: 0;
+}
+#upload .filelist li.filePickerBlock div.webuploader-pick  {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   opacity: 0;
+   background: none;
+   font-size: 0;
+}
+
+
+#upload .statusBar {
+   height: 45px;
+   border-bottom: 1px solid #dadada;
+   margin: 0 10px;
+   padding: 0;
+   line-height: 45px;
+   vertical-align: middle;
+   position: relative;
+}
+
+#upload .statusBar .progress {
+   border: 1px solid #1483d8;
+   width: 198px;
+   background: #fff;
+   height: 18px;
+   position: absolute;
+   top: 12px;
+   display: none;
+   text-align: center;
+   line-height: 18px;
+   color: #6dbfff;
+   margin: 0 10px 0 0;
+}
+#upload .statusBar .progress span.percentage {
+   width: 0;
+   height: 100%;
+   left: 0;
+   top: 0;
+   background: #1483d8;
+   position: absolute;
+}
+#upload .statusBar .progress span.text {
+   position: relative;
+   z-index: 10;
+}
+
+#upload .statusBar .info {
+   display: inline-block;
+   font-size: 14px;
+   color: #666666;
+}
+
+#upload .statusBar .btns {
+   position: absolute;
+   top: 7px;
+   right: 0;
+   line-height: 30px;
+}
+
+#filePickerBtn {
+   display: inline-block;
+   float: left;
+}
+#upload .statusBar .btns .webuploader-pick,
+#upload .statusBar .btns .uploadBtn,
+#upload .statusBar .btns .uploadBtn.state-uploading,
+#upload .statusBar .btns .uploadBtn.state-paused {
+   background: #ffffff;
+   border: 1px solid #cfcfcf;
+   color: #565656;
+   padding: 0 18px;
+   display: inline-block;
+   border-radius: 3px;
+   margin-left: 10px;
+   cursor: pointer;
+   font-size: 14px;
+   float: left;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#upload .statusBar .btns .webuploader-pick-hover,
+#upload .statusBar .btns .uploadBtn:hover,
+#upload .statusBar .btns .uploadBtn.state-uploading:hover,
+#upload .statusBar .btns .uploadBtn.state-paused:hover {
+   background: #f0f0f0;
+}
+
+#upload .statusBar .btns .uploadBtn,
+#upload .statusBar .btns .uploadBtn.state-paused{
+   background: #00b7ee;
+   color: #fff;
+   border-color: transparent;
+}
+#upload .statusBar .btns .uploadBtn:hover,
+#upload .statusBar .btns .uploadBtn.state-paused:hover{
+   background: #00a2d4;
+}
+
+#upload .statusBar .btns .uploadBtn.disabled {
+   pointer-events: none;
+   filter:alpha(opacity=60);
+   -moz-opacity:0.6;
+   -khtml-opacity: 0.6;
+   opacity: 0.6;
+}
+
+#upload .filelist li p.title {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   top: 45px;
+   text-indent: 5px;
+   text-align: left;
+   z-index: 100;
+   font-weight: bold;
+}
+
+#upload .filelist li p.imgWrap {
+   position: relative;
+   z-index: 2;
+   line-height: 113px;
+   vertical-align: middle;
+   overflow: hidden;
+   width: 113px;
+   height: 113px;
+   padding: 1px;
+   -webkit-transform-origin: 50% 50%;
+   -moz-transform-origin: 50% 50%;
+   -o-transform-origin: 50% 50%;
+   -ms-transform-origin: 50% 50%;
+   transform-origin: 50% 50%;
+   -webit-transition: 200ms ease-out;
+   -moz-transition: 200ms ease-out;
+   -o-transition: 200ms ease-out;
+   -ms-transition: 200ms ease-out;
+   transition: 200ms ease-out;
+}
+
+#upload .filelist li p.progress {
+   position: absolute;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   height: 8px;
+   overflow: hidden;
+   z-index: 50;
+   margin: 0;
+   border-radius: 0;
+   background: none;
+   -webkit-box-shadow: 0 0 0;
+}
+
+#upload .filelist div.file-panel span {
+   width: 24px;
+   height: 24px;
+   display: inline;
+   float: right;
+   text-indent: -9999px;
+   overflow: hidden;
+   background: url(./images/icons.png) no-repeat;
+   background: url(./images/icons.gif) no-repeat \9;
+   margin: 5px 1px 1px;
+   cursor: pointer;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#upload .filelist div.file-panel span.rotateRight {
+   display: none;
+   background-position: -24px -24px;
+}
+#upload .filelist div.file-panel span.rotateLeft {
+   display: none;
+   background-position: 0 -24px;
+}
+#upload .filelist div.file-panel span.cancel {
+   background-position: -48px -24px;
+}
+#upload .filelist li p.error {
+   background: #f43838;
+   color: #fff;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 28px;
+   line-height: 28px;
+   width: 100%;
+   z-index: 100;
+}
+#upload .filelist li p.progress span {
+   display: block;
+   overflow: hidden;
+   width: 0;
+   height: 100%;
+   background: #1483d8 url(./images/progress.png) repeat-x;
+   -webit-transition: width 200ms linear;
+   -moz-transition: width 200ms linear;
+   -o-transition: width 200ms linear;
+   -ms-transition: width 200ms linear;
+   transition: width 200ms linear;
+   -webkit-animation: progressmove 2s linear infinite;
+   -moz-animation: progressmove 2s linear infinite;
+   -o-animation: progressmove 2s linear infinite;
+   -ms-animation: progressmove 2s linear infinite;
+   animation: progressmove 2s linear infinite;
+   -webkit-transform: translateZ(0);
+}
+#upload .filelist li img {
+   width: 100%;
+   height:100%;
+}
+
+
+#upload .filelist li .success {
+   display: block;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   height: 40px;
+   width: 100%;
+   z-index: 200;
+   background: url(./images/success.png) no-repeat right bottom;
+   background: url(./images/success.gif) no-repeat right bottom \9;
+}
